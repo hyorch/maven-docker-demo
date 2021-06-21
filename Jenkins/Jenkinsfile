@@ -5,6 +5,10 @@ pipeline {
             args '-v /root/.m2:/root/.m2 --network ci'
         }
     }
+    environment {
+        DOCKER_HUB = credentials("${ORG_NAME}-docker-hub")
+    }
+
     tools {
         maven 'Maven3'
     }
@@ -29,16 +33,12 @@ pipeline {
                 sh "mvn test" 
             }
         }
-        stage('Maven Package') { 
+        stage('Maven JIB dockerBuild') { 
             steps {       
-                sh "mvn package" 
+                sh "mvn compile jib:dockerBuild" 
             }
         }
-        stage('Maven Verify') { 
-            steps {       
-                sh "mvn verify" 
-            }
-        }
+
         post {
             always {
                 junit 'target/surefire-reports/*.xml'
