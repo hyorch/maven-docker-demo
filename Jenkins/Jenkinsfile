@@ -55,7 +55,7 @@ pipeline {
 
         stage('Maven JIB dockerBuild') { 
             steps {       
-                sh "mvn compile jib:docckderBuild" 
+                sh "mvn compile jib:dockderBuild" 
             }
         }
     }
