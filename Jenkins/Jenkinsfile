@@ -52,6 +52,11 @@ pipeline {
                 }
             }
         }
+        stage('Docker Daemon Test') { 
+            steps {       
+                sh "echo 'hi' | docker load" 
+            }
+        }
 
         stage('Maven JIB dockerBuild') { 
             steps {       
