@@ -51,8 +51,7 @@ pipeline {
                     }
                 }
             }
-        }
-   
+        }   
 
         stage('Maven JIB dockerBuild') { 
             steps {       
