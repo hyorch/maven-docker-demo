@@ -6,7 +6,7 @@ pipeline {
         }
     }
     environment {
-        DOCKER_HUB = credentials("${ORG_NAME}-docker-hub")
+        DOCKER_HUB = credentials("hyorch-docker-hub")
     }
 
     tools {
