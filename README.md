@@ -2,4 +2,4 @@
 
 Maven app created with VCS
 
-Jenkinsfile. Jenkins declarative pipeline to compile and test Maven App on Docker container
+Jenkinsfile. Jenkins declarative pipeline to compile and test Maven App, package it and push to Docker Hub.
