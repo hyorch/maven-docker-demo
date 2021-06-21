@@ -28,10 +28,6 @@
         <configuration>
           <to>
             <image>docker.io/hyorch/demo-maven-jib</image>
-            <auth>
-              <username>${env.REGISTRY_USERNAME}</username>
-              <password>${env.REGISTRY_PASSWORD}</password>
-            </auth>
           </to>
         </configuration>
       </plugin>
